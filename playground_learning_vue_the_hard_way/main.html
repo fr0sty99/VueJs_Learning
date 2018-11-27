@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>VueJS Learning</title>
+
+
+</head>
+
+
+<body>
+
+
+  <div id="app">
+    <p v-bind:title="title">{{title}}</p>
+
+    <p v-if="name.show">{{name.first}} {{name.last}}</p>
+
+    <button v-on:click="addOrange">Add More Oranges</button>
+    <ul>
+      <li v-for="item in fruits">
+        {{item.amount}} Pcs of {{item.name}}
+      </li>
+    </ul>
+
+    <input type="text" v-model="fruit"/>
+    <button v-on:click="addFruit">Add</button>
+
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="mainApp.js"></script>
+
+</body>
+</html>
